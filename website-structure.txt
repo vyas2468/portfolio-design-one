@@ -1,0 +1,11 @@
+***Version 1.0***
+
+===LAST EDITED===
+===30 NOV 2018===
+1. Created Navbar with links and brand
+2. created a section-wrapper height 80vh;
+3. created a section-wrapper-content to house image, text, button, and hr
+
+===NEED TO DO===
+1. Figure out media query for screen size and how the text will appear - font size etc, so it does not overlap with the other sections. 
+2. Next section needs to be #about-me in detail where icons of the technologies I know are shown etc. and more importantly, the know more button links to that section of the page. 

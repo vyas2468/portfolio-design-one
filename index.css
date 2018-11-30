@@ -1,0 +1,143 @@
+/*RESPONSIVE NAVIGATION WITH TOGGLE*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4E84F9;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:last-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
+
+#brand {
+  display: flex;
+  padding: 10px;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+
+/*END OF NAVIGATION*/
+
+
+/*SECTION WRAPPER STARTS HERE*/
+.section-wrapper {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  /*border: 2px solid black;*/
+
+}
+
+.section-wrapper-content img {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  opacity: 0.6;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  position: relative;
+
+}
+
+/*PULSE ANIMATION ON IMAGE - IMAGE & BUTTON WITH CLASS PULSE*/
+.pulse {
+    animation-name: pulse_animation;
+    animation-duration: 5000ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.08); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1); }
+    70% { transform: scale(1.05); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+} /*END OF ANIMATION ON IMAGE*/
+
+/*I NEED TO FIGURE THIS OUT PROPERLY BECAUSE 
+WHEN SCREEN SIZE TOO SMALL, OVERLAPSE WITH THE NEXT DIV
+IT SHOULDNT. MEDIA QUERY PROBABLY REQUIRED. SEE BELOW ABOUT SECTION 
+WITH #home ID*/
+#home {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 40px;
+}
+
+.btn-outline-primary {
+    color: rgb(14, 160, 255);
+    background-color: transparent;
+    background-image: none;
+    border-color: rgb(14, 160, 255);
+    border-radius: 2em;
+}
+
+.divider {
+  width: 50%;
+  border: 1px solid #4888FA;
+  margin-top: 50px;
+}
